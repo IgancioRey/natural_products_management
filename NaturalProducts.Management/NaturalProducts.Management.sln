@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4212373B-E89A-488F-8FD4-0B0C89D043FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{BFEE7F82-0E43-4414-9584-39FB8EBE16FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{90D6B3B6-EF39-4D39-B7EC-415F04F01655}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B665EB61-115E-465F-8788-87A787DE9A3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{EA820514-41B3-46CA-B5DD-9E66A7A87DC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalProducts.Management.Domain", "NaturalProducts.Management.Domain\NaturalProducts.Management.Domain.csproj", "{EC948E46-EE23-4872-8F45-3DA30B123AC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalProducts.Management.Application", "NaturalProducts.Management.Application\NaturalProducts.Management.Application.csproj", "{30A59F3E-1975-452A-A120-4666495849AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC948E46-EE23-4872-8F45-3DA30B123AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC948E46-EE23-4872-8F45-3DA30B123AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC948E46-EE23-4872-8F45-3DA30B123AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC948E46-EE23-4872-8F45-3DA30B123AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30A59F3E-1975-452A-A120-4666495849AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A59F3E-1975-452A-A120-4666495849AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A59F3E-1975-452A-A120-4666495849AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A59F3E-1975-452A-A120-4666495849AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90D6B3B6-EF39-4D39-B7EC-415F04F01655} = {4212373B-E89A-488F-8FD4-0B0C89D043FF}
+		{B665EB61-115E-465F-8788-87A787DE9A3E} = {4212373B-E89A-488F-8FD4-0B0C89D043FF}
+		{EA820514-41B3-46CA-B5DD-9E66A7A87DC5} = {4212373B-E89A-488F-8FD4-0B0C89D043FF}
+		{EC948E46-EE23-4872-8F45-3DA30B123AC9} = {B665EB61-115E-465F-8788-87A787DE9A3E}
+		{30A59F3E-1975-452A-A120-4666495849AF} = {B665EB61-115E-465F-8788-87A787DE9A3E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58260E3F-EC06-4FAF-B1BB-B9AA68DEF955}
+	EndGlobalSection
+EndGlobal
