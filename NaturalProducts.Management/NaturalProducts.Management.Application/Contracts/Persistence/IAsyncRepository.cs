@@ -9,11 +9,11 @@ namespace NaturalProducts.Management.Application.Contracts.Persistence
 {
     public interface IAsyncRepository<T> where T : class
     {
-        Task<T?> GetByIdAsync(ObjectId id);
+        Task<T?> GetByIdAsync(string id);
         Task<IReadOnlyList<T>> ListAllAsync();
         Task<T> AddAsync(T entity);
-        Task UpdateAsync(ObjectId id, T entity);
-        Task DeleteAsync(ObjectId id);
+        Task UpdateAsync(string id, T entity);
+        Task DeleteAsync(string id);
         Task<IReadOnlyList<T>> GetPagedReponseAsync(int page, int size);
     }
 }

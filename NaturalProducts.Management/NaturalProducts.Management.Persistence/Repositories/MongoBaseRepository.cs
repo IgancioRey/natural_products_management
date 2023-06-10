@@ -20,7 +20,7 @@ namespace NaturalProducts.Management.Persistence.Repositories
             _collection = dbContext.GetCollection<T>(_collectionName);
         }
 
-        public virtual async Task<T?> GetByIdAsync(ObjectId id)
+        public virtual async Task<T?> GetByIdAsync(string id)
         {
             var filter = Builders<T>.Filter.Eq("_id", id);
             return await _collection.Find(filter).FirstOrDefaultAsync();
@@ -37,13 +37,13 @@ namespace NaturalProducts.Management.Persistence.Repositories
             return entity;
         }
 
-        public async Task UpdateAsync(ObjectId id, T entity)
+        public async Task UpdateAsync(string id, T entity)
         {
             var filter = Builders<T>.Filter.Eq("_id", id);
             await _collection.ReplaceOneAsync(filter, entity);
         }
 
-        public async Task DeleteAsync(ObjectId id)
+        public async Task DeleteAsync(string id)
         {
             var filter = Builders<T>.Filter.Eq("_id", id);
             await _collection.DeleteOneAsync(filter);

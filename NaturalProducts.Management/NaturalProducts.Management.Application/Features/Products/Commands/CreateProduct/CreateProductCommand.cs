@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace NaturalProducts.Management.Application.Features.Products.Commands.CreateProduct
 {
-    public class CreateProductCommand : IRequest<ObjectId>
+    public class CreateProductCommand : IRequest<string>
     {
         public string Name { get; set; } = string.Empty;
         public int Count { get; set; }
         public decimal Price { get; set; }
-        public decimal SellPrice { get; set; }
+        public decimal SalePrice { get; set; }
         public override string ToString()
         {
-            return $"Product name: {Name}; Count: {Count}; Price: {Price}; SellPrice: {SellPrice}";
+            return $"Product name: {Name}; Count: {Count}; Price: {Price}; SellPrice: {SalePrice}";
         }
 
     }

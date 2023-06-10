@@ -10,6 +10,6 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Dele
 {
     public class DeleteProductCommand : IRequest
     {
-        public ObjectId ProductId { get; set; }
+        public string ProductId { get; set; }
     }
 }

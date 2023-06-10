@@ -18,7 +18,7 @@ namespace NaturalProducts.Management.Persistence.Repositories
             _context = context;
         }
 
-        public virtual async Task<T?> GetByIdAsync(ObjectId id)
+        public virtual async Task<T?> GetByIdAsync(string id)
         {
             T? t = await _context.Set<T>().FindAsync(id);
             return t;
@@ -54,12 +54,12 @@ namespace NaturalProducts.Management.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public Task UpdateAsync(ObjectId id, T entity)
+        public Task UpdateAsync(string id, T entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteAsync(ObjectId id)
+        public Task DeleteAsync(string id)
         {
             throw new NotImplementedException();
         }

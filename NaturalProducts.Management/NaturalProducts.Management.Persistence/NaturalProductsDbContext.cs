@@ -29,7 +29,7 @@ namespace NaturalProducts.Management.Persistence
 
             modelBuilder.Entity<Product>().HasData(new Product
             {
-                ProductId = productGuid,
+                ProductId = productGuid.ToString(),
                 Name = "Castañas de cajú x 500 gr",
                 Count = 10,
                 Price = 500,

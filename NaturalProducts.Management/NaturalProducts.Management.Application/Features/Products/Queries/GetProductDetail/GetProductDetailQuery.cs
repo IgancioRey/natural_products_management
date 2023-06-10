@@ -10,6 +10,6 @@ namespace NaturalProducts.Management.Application.Features.Products.Queries.GetPr
 {
     public class GetProductDetailQuery: IRequest<ProductDetailVm>
     {
-        public ObjectId Id { get; set; }
+        public string Id { get; set; }
     }
 }

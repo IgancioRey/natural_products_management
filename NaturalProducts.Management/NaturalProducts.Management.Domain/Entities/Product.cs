@@ -13,7 +13,7 @@ namespace NaturalProducts.Management.Domain.Entities
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public ObjectId ProductId { get; set; }
+        public string ProductId { get; set; } = string.Empty;
 
         [BsonElement("name")]
         public string Name { get; set; } = string.Empty;
