@@ -1,0 +1,306 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Api\\NaturalProducts.Management.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Api\\NaturalProducts.Management.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Api\\NaturalProducts.Management.Api.csproj",
+        "projectName": "NaturalProducts.Management.Api",
+        "projectPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Api\\NaturalProducts.Management.Api.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Application\\NaturalProducts.Management.Application.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Application\\NaturalProducts.Management.Application.csproj"
+              },
+              "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Persistence\\NaturalProducts.Management.Persistence.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Persistence\\NaturalProducts.Management.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Application\\NaturalProducts.Management.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Application\\NaturalProducts.Management.Application.csproj",
+        "projectName": "NaturalProducts.Management.Application",
+        "projectPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Application\\NaturalProducts.Management.Application.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Domain\\NaturalProducts.Management.Domain.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Domain\\NaturalProducts.Management.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.5.2, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.5.2, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Domain\\NaturalProducts.Management.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Domain\\NaturalProducts.Management.Domain.csproj",
+        "projectName": "NaturalProducts.Management.Domain",
+        "projectPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Domain\\NaturalProducts.Management.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.19.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Persistence\\NaturalProducts.Management.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Persistence\\NaturalProducts.Management.Persistence.csproj",
+        "projectName": "NaturalProducts.Management.Persistence",
+        "projectPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Persistence\\NaturalProducts.Management.Persistence.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Application\\NaturalProducts.Management.Application.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GIT\\NaturalProductsManagement\\natural_products_management\\NaturalProducts.Management\\NaturalProducts.Management.Application\\NaturalProducts.Management.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.19.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

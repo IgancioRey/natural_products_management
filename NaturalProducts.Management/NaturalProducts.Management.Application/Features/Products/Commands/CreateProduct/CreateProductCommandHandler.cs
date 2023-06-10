@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using MongoDB.Bson;
 using NaturalProducts.Management.Application.Contracts.Persistence;
 using NaturalProducts.Management.Domain.Entities;
 using System;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace NaturalProducts.Management.Application.Features.Products.Commands.CreateProduct
 {
-    public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, Guid>
+    public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, ObjectId>
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
@@ -21,7 +22,7 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Crea
             _mapper = mapper;
         }
 
-        public async Task<Guid> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+        public async Task<ObjectId> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
             var @product = _mapper.Map<Product>(request);
 

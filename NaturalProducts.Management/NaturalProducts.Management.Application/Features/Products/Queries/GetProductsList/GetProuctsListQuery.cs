@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NaturalProducts.Management.Application.Features.Products.Queries.GetProductsList
 {
-    public class GetProuctsListQuery : IRequest<List<ProductListVm>>
+    public class GetProductsListQuery : IRequest<List<ProductListVm>>
     {
 
     }

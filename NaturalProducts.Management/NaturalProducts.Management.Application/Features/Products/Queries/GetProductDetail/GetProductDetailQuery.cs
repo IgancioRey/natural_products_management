@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace NaturalProducts.Management.Application.Features.Products.Queries.GetPr
 {
     public class GetProductDetailQuery: IRequest<ProductDetailVm>
     {
-        public Guid Id { get; set; }
+        public ObjectId Id { get; set; }
     }
 }

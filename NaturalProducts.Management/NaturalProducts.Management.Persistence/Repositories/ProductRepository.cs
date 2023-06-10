@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace NaturalProducts.Management.Persistence.Repositories
 {
-    public class ProductRepository : BaseRepository<Product>, IProductRepository
+    public class ProductRepository : MongoRepository<Product>, IProductRepository
     {
-        public ProductRepository(NaturalProductsDbContext dbContext) : base(dbContext) { }
+        public ProductRepository(MongoDbContext dbContext) : base(dbContext) { }
 
     }
 }

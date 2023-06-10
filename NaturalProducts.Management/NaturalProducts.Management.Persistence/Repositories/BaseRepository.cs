@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MongoDB.Bson;
 using NaturalProducts.Management.Application.Contracts.Persistence;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace NaturalProducts.Management.Persistence.Repositories
             _context = context;
         }
 
-        public virtual async Task<T?> GetByIdAsync(Guid id)
+        public virtual async Task<T?> GetByIdAsync(ObjectId id)
         {
             T? t = await _context.Set<T>().FindAsync(id);
             return t;
@@ -51,6 +52,16 @@ namespace NaturalProducts.Management.Persistence.Repositories
         {
             _context.Set<T>().Remove(entity);
             await _context.SaveChangesAsync();
+        }
+
+        public Task UpdateAsync(ObjectId id, T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(ObjectId id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

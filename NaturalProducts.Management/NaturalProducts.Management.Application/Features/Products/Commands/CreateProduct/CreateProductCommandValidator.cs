@@ -17,8 +17,8 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Crea
                 .NotEmpty().WithMessage("{PropertyName} is required.")
                 .GreaterThan(0).WithMessage("{PropertyName} must be greater than 0.");
 
-            RuleFor(c => c.SellPrice)
-                .GreaterThan(c=>c.Price).WithMessage("{PropertyName} must be greater than Price.");
+            //RuleFor(c => c.SellPrice)
+            //    .GreaterThan(c=>c.Price).WithMessage("{PropertyName} must be greater than Price.");
         }
     }
 }

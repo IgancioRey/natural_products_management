@@ -25,7 +25,7 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Dele
         {
             var product = await _productRepository.GetByIdAsync(request.ProductId);
 
-            await _productRepository.DeleteAsync(product);
+            await _productRepository.DeleteAsync(product.ProductId);
 
             return Unit.Value;
         }

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Upda
 {
     public class UpdateProductCommand: IRequest
     {
-        public Guid ProductId { get; set; }
+        public ObjectId ProductId { get; set; }
         public string Name { get; set; } = string.Empty;
         public int Count { get; set; }
         public decimal Price { get; set; }

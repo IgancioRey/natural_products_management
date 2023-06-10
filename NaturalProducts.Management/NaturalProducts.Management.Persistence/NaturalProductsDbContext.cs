@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using MongoDB.Bson;
 using NaturalProducts.Management.Domain.Common;
 using NaturalProducts.Management.Domain.Entities;
 using System;
@@ -24,7 +25,7 @@ namespace NaturalProducts.Management.Persistence
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(NaturalProductsDbContext).Assembly);
 
             //seed data, added through migrations
-            var productGuid = Guid.Parse("{B0788D2F-8003-43C1-92A4-EDC76A7C5DDE}");
+            var productGuid = ObjectId.Parse("{B0788D2F-8003-43C1-92A4-EDC76A7C5DDE}");
 
             modelBuilder.Entity<Product>().HasData(new Product
             {

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Dele
 {
     public class DeleteProductCommand : IRequest
     {
-        public Guid ProductId { get; set; }
+        public ObjectId ProductId { get; set; }
     }
 }
