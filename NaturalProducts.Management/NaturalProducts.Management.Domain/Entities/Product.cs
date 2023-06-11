@@ -24,8 +24,8 @@ namespace NaturalProducts.Management.Domain.Entities
         [BsonElement("price")]
         public decimal Price { get; set; }
 
-        [BsonElement("salePrice")]
-        public decimal SalePrice { get; set; }
+        [BsonElement("sellingPrice")]
+        public decimal SellingPrice { get; set; }
 
     }
 }

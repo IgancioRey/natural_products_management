@@ -11,6 +11,6 @@ namespace NaturalProducts.Management.Application.Features.Products.Queries.GetPr
     {
         public string ProductId { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
-        public decimal SalePrice { get; set; }
+        public decimal SellingPrice { get; set; }
     }
 }

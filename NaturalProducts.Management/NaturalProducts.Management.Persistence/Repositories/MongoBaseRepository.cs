@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using NaturalProducts.Management.Application.Contracts.Persistence;
+using NaturalProducts.Management.Domain.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,12 +34,22 @@ namespace NaturalProducts.Management.Persistence.Repositories
 
         public async Task<T> AddAsync(T entity)
         {
+            if (entity is AuditableEntity auditableEntity)
+            {
+                auditableEntity.OnCreating();
+            }
+
             await _collection.InsertOneAsync(entity);
             return entity;
         }
 
         public async Task UpdateAsync(string id, T entity)
         {
+            if (entity is AuditableEntity auditableEntity)
+            {
+                auditableEntity.OnUpdating();
+            }
+
             var filter = Builders<T>.Filter.Eq("_id", id);
             await _collection.ReplaceOneAsync(filter, entity);
         }

@@ -13,6 +13,6 @@ namespace NaturalProducts.Management.Application.Features.Products.Queries.GetPr
         public string Name { get; set; } = string.Empty;
         public int Count { get; set; }
         public decimal Price { get; set; }
-        public decimal SalePrice { get; set; }
+        public decimal SellingPrice { get; set; }
     }
 }
