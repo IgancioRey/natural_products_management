@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using NaturalProducts.Management.Application.Features.Customers.Commands.CreateCustomer;
+using NaturalProducts.Management.Application.Features.Customers.Queries.GetCustomersList;
 using NaturalProducts.Management.Application.Features.Products.Commands.CreateProduct;
 using NaturalProducts.Management.Application.Features.Products.Commands.DeleteProduct;
 using NaturalProducts.Management.Application.Features.Products.Commands.UpdateProduct;
@@ -20,6 +22,9 @@ namespace NaturalProducts.Management.Application.Profiles
             CreateMap<Product, CreateProductCommand>().ReverseMap();
             CreateMap<Product, UpdateProductCommand>().ReverseMap();
             CreateMap<Product, DeleteProductCommand>().ReverseMap();
+
+            CreateMap<Customer, CustomerListVm>().ReverseMap();
+            CreateMap<Customer, CreateCustomerCommand>().ReverseMap();
 
         }
     }

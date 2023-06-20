@@ -27,6 +27,7 @@ namespace NaturalProducts.Management.Persistence
             services.AddScoped(typeof(IAsyncRepository<>), typeof(MongoRepository<>));
 
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
 
             return services;
         }
