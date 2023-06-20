@@ -23,6 +23,15 @@ namespace NaturalProducts.Management.Api
 
         public static WebApplication ConfigurePipeline(this WebApplication app)
         {
+            //if (app.Environment.IsDevelopment())
+            //{
+            //    app.UseSwagger();
+            //    app.UseSwaggerUI(c =>
+            //    {
+            //        c.SwaggerEndpoint("/swagger/v1/swagger.json", "NaturalProducts Management API");
+            //    });
+            //}
+
             app.UseHttpsRedirection();
             
             app.UseRouting();

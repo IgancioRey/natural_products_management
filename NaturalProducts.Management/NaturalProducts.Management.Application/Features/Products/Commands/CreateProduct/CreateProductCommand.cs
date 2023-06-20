@@ -8,16 +8,12 @@ using System.Threading.Tasks;
 
 namespace NaturalProducts.Management.Application.Features.Products.Commands.CreateProduct
 {
-    public class CreateProductCommand : IRequest<string>
+    public class CreateProductCommand : IRequest<CreateProductCommandResponse>
     {
         public string Name { get; set; } = string.Empty;
         public int Count { get; set; }
         public decimal Price { get; set; }
         public decimal SellingPrice { get; set; }
-        public override string ToString()
-        {
-            return $"Product name: {Name}; Count: {Count}; Price: {Price}; SellPrice: {SellingPrice}";
-        }
 
     }
 }

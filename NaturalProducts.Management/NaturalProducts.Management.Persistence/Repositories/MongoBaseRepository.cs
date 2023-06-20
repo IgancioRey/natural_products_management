@@ -23,7 +23,8 @@ namespace NaturalProducts.Management.Persistence.Repositories
 
         public virtual async Task<T?> GetByIdAsync(string id)
         {
-            var filter = Builders<T>.Filter.Eq("_id", id);
+            var objectId = ObjectId.Parse(id);
+            var filter = Builders<T>.Filter.Eq("_id", objectId);
             return await _collection.Find(filter).FirstOrDefaultAsync();
         }
 
@@ -49,8 +50,8 @@ namespace NaturalProducts.Management.Persistence.Repositories
             {
                 auditableEntity.OnUpdating();
             }
-
-            var filter = Builders<T>.Filter.Eq("_id", id);
+            var objectId = ObjectId.Parse(id);
+            var filter = Builders<T>.Filter.Eq("_id", objectId);
             await _collection.ReplaceOneAsync(filter, entity);
         }
 

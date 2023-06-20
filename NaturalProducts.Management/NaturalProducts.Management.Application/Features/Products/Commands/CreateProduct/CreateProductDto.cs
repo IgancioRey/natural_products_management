@@ -9,7 +9,7 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Crea
 {
     public class CreateProductDto
     {
-        public ObjectId ProductId { get; set; }
+        public string ProductId { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
     }
 }

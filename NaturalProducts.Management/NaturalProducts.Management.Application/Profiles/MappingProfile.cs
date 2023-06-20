@@ -22,9 +22,11 @@ namespace NaturalProducts.Management.Application.Profiles
             CreateMap<Product, CreateProductCommand>().ReverseMap();
             CreateMap<Product, UpdateProductCommand>().ReverseMap();
             CreateMap<Product, DeleteProductCommand>().ReverseMap();
+            CreateMap<Product, CreateProductDto>().ReverseMap();
 
             CreateMap<Customer, CustomerListVm>().ReverseMap();
             CreateMap<Customer, CreateCustomerCommand>().ReverseMap();
+            CreateMap<Customer, CreateCustomerDto>().ReverseMap();
 
         }
     }

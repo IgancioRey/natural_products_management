@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace NaturalProducts.Management.Application.Features.Products.Commands.CreateProduct
 {
-    public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, string>
+    public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, CreateProductCommandResponse>
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
@@ -22,21 +22,32 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Crea
             _mapper = mapper;
         }
 
-        public async Task<string> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+        public async Task<CreateProductCommandResponse> Handle(CreateProductCommand request, CancellationToken cancellationToken)
         {
-            var @product = _mapper.Map<Product>(request);
+            var createProductCommandResponse = new CreateProductCommandResponse();     
 
             var validator = new CreateProductCommandValidator();
             var validatorResult = await validator.ValidateAsync(request);
 
             if (validatorResult.Errors.Count > 0) 
             {
-                throw new Exceptions.ValidationException(validatorResult);
+                createProductCommandResponse.Success = false;
+                createProductCommandResponse.ValidationErrors = new List<string>();
+                foreach (var error in validatorResult.Errors)
+                {
+                    createProductCommandResponse.ValidationErrors.Add(error.ErrorMessage);
+                }                
             }
 
-            @product = await _productRepository.AddAsync(@product);
+            if (createProductCommandResponse.Success)
+            {
+                var @product = _mapper.Map<Product>(request);
+                @product = await _productRepository.AddAsync(@product);
+                createProductCommandResponse.Product = _mapper.Map<CreateProductDto>(product);
+            }
 
-            return product.ProductId;
+
+            return createProductCommandResponse;
         }
     }
 }
