@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using NaturalProducts.Management.Application.Features.Customers.Commands.CreateCustomer;
+using NaturalProducts.Management.Application.Features.Customers.Commands.DeleteCustomer;
+using NaturalProducts.Management.Application.Features.Customers.Commands.UpdateCustomer;
 using NaturalProducts.Management.Application.Features.Customers.Queries.GetCustomersList;
 
 namespace NaturalProducts.Management.Api.Controllers
@@ -34,6 +36,27 @@ namespace NaturalProducts.Management.Api.Controllers
             return Ok(response);
         }
 
+        [HttpPut(Name = "UpdateCustomer")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
+        public async Task<ActionResult> Update([FromBody] UpdateCustomerCommand updateCustomer)
+        {
+            await _mediator.Send(updateCustomer);
 
+            return NoContent();
+        }
+
+        [HttpDelete("{id}", Name ="DeleteCustomer")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesDefaultResponseType]
+        public async Task<ActionResult> Delete(string id)
+        {
+            var deleteCustomerCommand = new DeleteCustomerCommand() { CustomerId = id };
+            await _mediator.Send(deleteCustomerCommand);
+
+            return NoContent();
+        }
     }
 }

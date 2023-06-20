@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using NaturalProducts.Management.Application.Contracts.Persistence;
+using NaturalProducts.Management.Application.Exceptions;
 using NaturalProducts.Management.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -23,9 +24,23 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Upda
 
         public async Task<Unit> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
         {
-            var product = await _productRepository.GetByIdAsync(request.ProductId);
+            var productToUpdate = await _productRepository.GetByIdAsync(request.ProductId);
+            if (productToUpdate == null)
+            {
+                throw new NotFoundException(nameof(Product), request.ProductId);
+            }
 
-            _mapper.Map(request, product, typeof(UpdateProductCommand), typeof(Product));
+            var validator = new UpdateProductCommandValidator();
+            var validationResult = await validator.ValidateAsync(request);
+
+            if (validationResult.Errors.Count > 0)
+            {
+                throw new ValidationException(validationResult);
+            }
+
+            _mapper.Map(request, productToUpdate, typeof(UpdateProductCommand), typeof(Product));
+
+            await _productRepository.UpdateAsync(request.ProductId, productToUpdate);
 
             return Unit.Value;
         }
