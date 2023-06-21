@@ -57,7 +57,8 @@ namespace NaturalProducts.Management.Persistence.Repositories
 
         public async Task DeleteAsync(string id)
         {
-            var filter = Builders<T>.Filter.Eq("_id", id);
+            var objectId = ObjectId.Parse(id);
+            var filter = Builders<T>.Filter.Eq("_id", objectId);
             await _collection.DeleteOneAsync(filter);
         }
 
