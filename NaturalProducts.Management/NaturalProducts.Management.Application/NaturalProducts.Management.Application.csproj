@@ -18,4 +18,10 @@
     <ProjectReference Include="..\NaturalProducts.Management.Domain\NaturalProducts.Management.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Orders\Commands\DeleteOrder\" />
+    <Folder Include="Features\Orders\Commands\UpdateOrder\" />
+    <Folder Include="Features\Orders\Queries\" />
+  </ItemGroup>
+
 </Project>

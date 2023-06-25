@@ -12,7 +12,7 @@ namespace NaturalProducts.Management.Persistence.Repositories
 {
     public class MongoRepository<T> : IAsyncRepository<T> where T : class
     {
-        private readonly IMongoCollection<T> _collection;
+        protected readonly IMongoCollection<T> _collection;
         private readonly string _collectionName;
 
         public MongoRepository(MongoDbContext dbContext)

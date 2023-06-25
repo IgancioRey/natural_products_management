@@ -9,5 +9,6 @@ namespace NaturalProducts.Management.Application.Contracts.Persistence
 {
     public interface ICustomerRepository : IAsyncRepository<Customer>
     {
+        Task<bool> DoesCustomerExist(string customerId);
     }
 }

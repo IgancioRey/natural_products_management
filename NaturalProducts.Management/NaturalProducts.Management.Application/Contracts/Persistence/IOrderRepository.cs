@@ -9,6 +9,6 @@ namespace NaturalProducts.Management.Application.Contracts.Persistence
 {
     public interface IOrderRepository : IAsyncRepository<Order>
     {
-        Task<bool> IsOrderCustomerAndDateUnique(Guid customerId, DateTime orderDate);
+        Task<bool> IsOrderCustomerAndDateUnique(string customerId, DateTime orderDate);
     }
 }
