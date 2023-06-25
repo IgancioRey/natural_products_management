@@ -13,13 +13,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B665EB61-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{EA820514-41B3-46CA-B5DD-9E66A7A87DC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalProducts.Management.Domain", "NaturalProducts.Management.Domain\NaturalProducts.Management.Domain.csproj", "{EC948E46-EE23-4872-8F45-3DA30B123AC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalProducts.Management.Domain", "NaturalProducts.Management.Domain\NaturalProducts.Management.Domain.csproj", "{EC948E46-EE23-4872-8F45-3DA30B123AC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalProducts.Management.Application", "NaturalProducts.Management.Application\NaturalProducts.Management.Application.csproj", "{30A59F3E-1975-452A-A120-4666495849AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalProducts.Management.Application", "NaturalProducts.Management.Application\NaturalProducts.Management.Application.csproj", "{30A59F3E-1975-452A-A120-4666495849AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalProducts.Management.Persistence", "NaturalProducts.Management.Persistence\NaturalProducts.Management.Persistence.csproj", "{AB76699E-6559-48A3-AB01-DC17415B5209}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalProducts.Management.Persistence", "NaturalProducts.Management.Persistence\NaturalProducts.Management.Persistence.csproj", "{AB76699E-6559-48A3-AB01-DC17415B5209}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalProducts.Management.Api", "NaturalProducts.Management.Api\NaturalProducts.Management.Api.csproj", "{380E8395-0835-48B5-AAF8-DA20555DAF05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalProducts.Management.Api", "NaturalProducts.Management.Api\NaturalProducts.Management.Api.csproj", "{380E8395-0835-48B5-AAF8-DA20555DAF05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalProducts.Man.App.UnitTests", "NaturalProducts.Man.App.UnitTests\NaturalProducts.Man.App.UnitTests.csproj", "{CC305984-6468-481E-9EBB-CF585443DC22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{380E8395-0835-48B5-AAF8-DA20555DAF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{380E8395-0835-48B5-AAF8-DA20555DAF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{380E8395-0835-48B5-AAF8-DA20555DAF05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC305984-6468-481E-9EBB-CF585443DC22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC305984-6468-481E-9EBB-CF585443DC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC305984-6468-481E-9EBB-CF585443DC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC305984-6468-481E-9EBB-CF585443DC22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{30A59F3E-1975-452A-A120-4666495849AF} = {B665EB61-115E-465F-8788-87A787DE9A3E}
 		{AB76699E-6559-48A3-AB01-DC17415B5209} = {EA820514-41B3-46CA-B5DD-9E66A7A87DC5}
 		{380E8395-0835-48B5-AAF8-DA20555DAF05} = {90D6B3B6-EF39-4D39-B7EC-415F04F01655}
+		{CC305984-6468-481E-9EBB-CF585443DC22} = {BFEE7F82-0E43-4414-9584-39FB8EBE16FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58260E3F-EC06-4FAF-B1BB-B9AA68DEF955}
