@@ -35,7 +35,7 @@ namespace NaturalProducts.Management.Domain.Entities
         public bool Withdrawn { get; set; }
 
         [BsonElement("detail")]
-        public ICollection<OrderDetail> Detail { get; set; } = default!;
+        public ICollection<OrderDetail>? Detail { get; set; }
 
     }
 }
