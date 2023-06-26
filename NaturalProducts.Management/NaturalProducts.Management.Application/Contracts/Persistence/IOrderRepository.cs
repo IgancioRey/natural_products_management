@@ -10,5 +10,7 @@ namespace NaturalProducts.Management.Application.Contracts.Persistence
     public interface IOrderRepository : IAsyncRepository<Order>
     {
         Task<bool> IsOrderCustomerAndDateUnique(string customerId, DateTime orderDate);
+
+        Task<List<Order>> GetOrdersBetweenDates(DateTime? dateFrom, DateTime? dateTo);
     }
 }

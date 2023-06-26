@@ -2,6 +2,7 @@
 using NaturalProducts.Management.Application.Features.Customers.Commands.CreateCustomer;
 using NaturalProducts.Management.Application.Features.Customers.Queries.GetCustomersList;
 using NaturalProducts.Management.Application.Features.Orders.Commands.CreateOrder;
+using NaturalProducts.Management.Application.Features.Orders.Queries.GetOrdersList;
 using NaturalProducts.Management.Application.Features.Products.Commands.CreateProduct;
 using NaturalProducts.Management.Application.Features.Products.Commands.DeleteProduct;
 using NaturalProducts.Management.Application.Features.Products.Commands.UpdateProduct;
@@ -28,9 +29,11 @@ namespace NaturalProducts.Management.Application.Profiles
             CreateMap<Customer, CustomerListVm>().ReverseMap();
             CreateMap<Customer, CreateCustomerCommand>().ReverseMap();
             CreateMap<Customer, CreateCustomerDto>().ReverseMap();
+            CreateMap<Customer, CustomerDto>().ReverseMap();
 
             CreateMap<Order, CreateOrderCommand>().ReverseMap();
             CreateMap<Order, CreateOrderDto>().ReverseMap();
+            CreateMap<Order, OrderListVm>().ReverseMap();
 
         }
     }

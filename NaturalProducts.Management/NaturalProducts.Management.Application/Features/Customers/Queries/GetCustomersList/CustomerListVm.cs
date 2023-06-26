@@ -12,6 +12,7 @@ namespace NaturalProducts.Management.Application.Features.Customers.Queries.GetC
         public string CustomerId { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
+        public string FullName { get; set; } = string.Empty;
         public string MobileNumber { get; set; } = string.Empty;
     }
 }

@@ -21,7 +21,6 @@
   <ItemGroup>
     <Folder Include="Features\Orders\Commands\DeleteOrder\" />
     <Folder Include="Features\Orders\Commands\UpdateOrder\" />
-    <Folder Include="Features\Orders\Queries\" />
   </ItemGroup>
 
 </Project>

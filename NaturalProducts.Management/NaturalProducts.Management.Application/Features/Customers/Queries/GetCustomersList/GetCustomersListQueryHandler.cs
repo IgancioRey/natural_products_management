@@ -23,7 +23,7 @@ namespace NaturalProducts.Management.Application.Features.Customers.Queries.GetC
 
         public async Task<List<CustomerListVm>> Handle(GetCustomersListQuery request, CancellationToken cancellationToken)
         {
-            var allCustomer = (await _customerRepository.ListAllAsync()).OrderBy(x => x.LastName).OrderBy(y => y.Name);
+            var allCustomer = (await _customerRepository.ListAllAsync()).OrderBy(x => x.LastName).OrderBy(y => y.FullName);
 
             return _mapper.Map<List<CustomerListVm>>(allCustomer);
         }
