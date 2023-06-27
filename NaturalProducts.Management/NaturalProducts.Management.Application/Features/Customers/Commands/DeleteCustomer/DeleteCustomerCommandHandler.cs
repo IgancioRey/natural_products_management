@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using NaturalProducts.Management.Application.Contracts.Persistence;
+using NaturalProducts.Management.Application.Exceptions;
 using NaturalProducts.Management.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,11 @@ namespace NaturalProducts.Management.Application.Features.Customers.Commands.Del
         public async Task<Unit> Handle(DeleteCustomerCommand request, CancellationToken cancellationToken)
         {
             var customer = await _customerRepository.GetByIdAsync(request.CustomerId);
+
+            if (customer == null)
+            {
+                throw new NotFoundException(nameof(Customer), request.CustomerId);
+            }
 
             await _customerRepository.DeleteAsync(customer.CustomerId);
 

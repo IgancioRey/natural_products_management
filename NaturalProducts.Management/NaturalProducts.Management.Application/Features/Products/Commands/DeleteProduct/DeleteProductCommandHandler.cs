@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using NaturalProducts.Management.Application.Contracts.Persistence;
+using NaturalProducts.Management.Application.Exceptions;
 using NaturalProducts.Management.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,11 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Dele
         public async Task<Unit> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
         {
             var product = await _productRepository.GetByIdAsync(request.ProductId);
+
+            if (product == null)
+            {
+                throw new NotFoundException(nameof(Product), request.ProductId);
+            }
 
             await _productRepository.DeleteAsync(product.ProductId);
 

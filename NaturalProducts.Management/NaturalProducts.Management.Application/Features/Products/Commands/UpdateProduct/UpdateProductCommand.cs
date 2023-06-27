@@ -10,7 +10,7 @@ namespace NaturalProducts.Management.Application.Features.Products.Commands.Upda
 {
     public class UpdateProductCommand: IRequest
     {
-        public string ProductId { get; set; }
+        public string ProductId { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public int Count { get; set; }
         public decimal Price { get; set; }
