@@ -59,5 +59,6 @@ namespace NaturalProducts.Management.Api.Controllers
             await _mediator.Send(deleteOrderCommand);
 
             return NoContent();
+        }
     }
 }

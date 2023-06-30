@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NaturalProducts.Management.Application.Features.Orders.Commands.DeleteOrder
 {
-    public class FeleteOrderCommand :IRequest
+    public class DeleteOrderCommand :IRequest
     {
         public string OrderId { get; set; }
     }
